@@ -4,7 +4,7 @@ import { EB_Garamond } from "next/font/google";
 import { FiMail, FiMenu, FiPhone, FiSearch, FiX } from 'react-icons/fi';
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const font = EB_Garamond({ subsets: ['latin'] });
 
