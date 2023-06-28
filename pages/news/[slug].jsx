@@ -45,7 +45,7 @@ export default function PostTinTuc({ frontMatter: { title, description, author, 
                 <title>{title}</title>
                 <meta name="description" content={description}></meta>
             </Head>
-            <div className='mx-auto max-w-4xl py-16 px-6 lg:py-24'>
+            <div className='mx-auto max-w-4xl py-16 px-5 lg:py-24'>
                 <div className='text-gray-800 border-b border-solid border-gray-200'>
                     <p className='font-bold leading-snug text-3xl lg:text-4xl lg:leading-snug'>{title}</p>
                     <div className='flex justify-between text-xs text-gray-400 my-7 md:text-sm'>
