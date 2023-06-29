@@ -16,7 +16,7 @@ export default function PostContainer({ thumbnail, title, description, date, slu
                     <div className='flex items-center'>
                         <p className='font-semibold text-xs sm:text-sm'>{date}</p>
                         <div className='w-[1px] h-6 mx-6 bg-yellow-600'></div>
-                        <button className='bg-gray-50 text-gray-900 rounded-full px-4 py-2 hover:bg-gray-300 disabled:bg-gray-400 disabled:pointer-events-none' disabled={disabled}>
+                        <button className='bg-gray-50 text-gray-900 rounded-full px-4 py-2 hover:bg-gray-300 disabled:bg-gray-500 disabled:pointer-events-none' disabled={disabled}>
                             <Link href={`/news/${slug}`} passHref className='flex items-center'>
                                 <FiEye className='mr-2 text-xs sm:text-sm'/>
                                 <p className='font-semibold text-xs sm:text-sm'>Đọc</p>

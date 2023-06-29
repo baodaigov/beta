@@ -51,8 +51,8 @@ export default function Header(){
                             <div role="navigation" className="flex items-center">
                                 <div className='hidden items-center lg:flex'>
                                     {routes.map(i => (
-                                        <Link href={i.href} key={Math.random()}>
-                                            <p className='text-sm mr-9 text-gray-50 hover:text-gray-400'>{i.label}</p>
+                                        <Link href={i.href} className='mr-9' key={Math.random()}>
+                                            <p className='text-sm text-gray-50 hover:text-gray-400'>{i.label}</p>
                                         </Link>
                                     ))}
                                 </div>

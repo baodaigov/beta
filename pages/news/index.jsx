@@ -22,15 +22,21 @@ export const getStaticProps = async () => {
 }
 
 export default function TinTuc({ posts }){
-    console.log(posts);
-    
     return (
         <>
             <Head>
                 <title>Tin tức sự kiện | Chính phủ Quốc gia Bảo Đại</title>
             </Head>
             {posts.map(post => (
-                <PostContainer thumbnail={post.frontMatter.thumbnail} title={post.frontMatter.title} description={post.frontMatter.description} date={post.frontMatter.date} slug={post.slug} key={Math.random()}/>
+                <PostContainer
+                    thumbnail={post.frontMatter.thumbnail}
+                    title={post.frontMatter.title}
+                    description={post.frontMatter.description}
+                    date={post.frontMatter.date}
+                    slug={post.slug}
+                    disabled={post.frontMatter.disabled}
+                    key={Math.random()}
+                />
             ))}
         </>
     )
