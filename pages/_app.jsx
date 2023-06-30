@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import '@/styles/globals.css'
 import NextNProgress from 'nextjs-progressbar';
-import PropTypes from 'prop-types';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -10,7 +9,6 @@ import Head from 'next/head';
 const font = Inter({ subsets: ['latin'], weight: ['100','200','300','400','500','600','700','800','900'] });
 
 const RootLayout = ({ Component, pageProps }) => {
-
   return (
     <>
       <NextNProgress color='#f9fafb'/>
@@ -21,16 +19,11 @@ const RootLayout = ({ Component, pageProps }) => {
       </Head>
       <div className={font.className}>
         <Header/>
-        <Component {...pageProps}/>
+          <Component {...pageProps}/>
         <Footer/>
       </div>
     </>
   )
-}
-
-RootLayout.propTypes = {
-  Component: PropTypes.func.isRequired,
-  pageProps: PropTypes.object.isRequired,
 }
 
 export default RootLayout;

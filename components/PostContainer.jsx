@@ -4,10 +4,10 @@ import { FiEye } from "react-icons/fi";
 
 const font = EB_Garamond({ subsets: ['latin'] });
 
-export default function PostContainer({ thumbnail, title, description, date, slug, disabled }){
+export default function PostContainer({ thumbnail, title, description, date, slug, disabled, className }){
     return (
-        <div className='bg-no-repeat bg-cover bg-center w-screen' style={{ backgroundImage: `url('${thumbnail}')` }}>
-            <div className='bg-black bg-opacity-80 h-full w-full text-gray-50 py-44 px-8 sm:px-12'>
+        <div className={`bg-no-repeat bg-cover bg-center ${className}`} style={{ backgroundImage: `url('${thumbnail}')` }}>
+            <div className='whitespace-normal bg-black bg-opacity-80 h-full w-screen text-gray-50 py-44 px-8 sm:px-12'>
                 <div className='mx-auto max-w-6xl'>
                     <div className={font.className}>
                         <p className='text-3xl mb-5 sm:text-4xl'>{title}</p>
