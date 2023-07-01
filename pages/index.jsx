@@ -85,17 +85,17 @@ export default function Home() {
                         />
                     ))}
                 </div>
-                <div className={`w-12 h-12 justify-center items-center rounded-full bg-white bg-opacity-5 text-gray-50 absolute top-[40%] hidden right-0 z-10 transition-all duration-300 mr-16 cursor-pointer hover:mr-14 hover:bg-opacity-10 min-[1460px]:flex ${index === 4 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev + 1)}>
-                    <GoChevronRight className={`text-2xl text-gray-50 ${index === 4 && 'text-opacity-20'}`}/>
+                <div className={`w-12 h-12 justify-center items-center rounded-full bg-white bg-opacity-5 text-gray-50 absolute top-[40%] hidden right-0 z-10 transition-all duration-300 mr-16 cursor-pointer hover:mr-14 hover:bg-opacity-10 min-[1460px]:flex ${index === posts.length - 1 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev + 1)}>
+                    <GoChevronRight className={`text-2xl text-gray-50 ${index === posts.length - 1 && 'text-opacity-20'}`}/>
                 </div>
                 <div className='absolute bottom-0 w-full z-10 block p-10 min-[1460px]:hidden'>
                     <div className='flex justify-between items-center text-gray-50'>
-                        <div className={`flex w-10 h-10 justify-center items-center rounded-full bg-gray-50 bg-opacity-5 transition-all duration-300 cursor-pointer hover:bg-opacity-10 ${index === 0 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev - 1)}>
+                        <div className={`flex w-10 h-10 justify-center items-center rounded-full bg-gray-50 bg-opacity-5 transition-all duration-300 cursor-pointer ${index === 0 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev - 1)}>
                             <GoChevronLeft className={`text-xl text-gray-50 ${index === 0 && 'text-opacity-20'}`}/>
                         </div>
                         <p className='text-sm'>{index + 1} / {posts.length}</p>
-                        <div className={`flex w-10 h-10 justify-center items-center rounded-full bg-gray-50 bg-opacity-5 transition-all duration-300 cursor-pointer hover:bg-opacity-10 ${index === 4 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev + 1)}>
-                            <GoChevronRight className={`text-xl text-gray-50 ${index === 4 && 'text-opacity-20'}`}/>
+                        <div className={`flex w-10 h-10 justify-center items-center rounded-full bg-gray-50 bg-opacity-5 transition-all duration-300 cursor-pointer ${index === posts.length - 1 && 'pointer-events-none'}`} onClick={() => setIndex(prev => prev + 1)}>
+                            <GoChevronRight className={`text-xl text-gray-50 ${index === posts.length - 1 && 'text-opacity-20'}`}/>
                         </div>
                     </div>
                 </div>
