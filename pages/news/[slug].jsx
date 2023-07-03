@@ -5,7 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { FiCalendar, FiUser } from 'react-icons/fi';
-import SocialMedia from '@/components/SocialMedia';
+import SocialMediaSharing from '@/components/SocialMediaSharing';
 import Head from 'next/head';
 import PostNotAvailable from './PostUnavailable';
 
@@ -48,20 +48,20 @@ export default function PostTinTuc({ frontMatter: { title, description, author, 
                     <PostNotAvailable/>
                 </div>
             ) : (
-                <div className='mx-auto max-w-4xl py-16 px-5 lg:py-24'>
+                <div className='mx-auto max-w-4xl py-24 px-6 max-lg:py-16'>
                     <div className='text-gray-800 border-b border-solid border-gray-200'>
-                        <p className='font-bold leading-snug text-3xl lg:text-4xl lg:leading-snug'>{title}</p>
-                        <div className='flex justify-between text-xs text-gray-400 my-7 md:text-sm'>
+                        <p className='font-bold leading-snug text-4xl max-lg:text-3xl'>{title}</p>
+                        <div className='flex justify-between text-sm text-gray-400 my-7 max-md:text-xs'>
                             <div className='flex items-center'>
                                 <FiUser className='mr-2'/>
                                 <p className='mr-5'>{author}</p>
                                 <FiCalendar className='mr-2'/>
                                 <p>{date}</p>
                             </div>
-                            <SocialMedia url={`${process.env.NEXT_PUBLIC_URL}/news/${slug}`} title={title}/>
+                            <SocialMediaSharing className='text-lg mr-3 max-md:text-base text-gray-400 hover:text-gray-500' url={`${process.env.NEXT_PUBLIC_URL}/news/${slug}`} title={title}/>
                         </div>
                     </div>
-                    <article className='my-8 prose prose-sm prose-figure:my-10 prose-figcaption:text-center prose-img:mx-auto text-gray-800 max-w-none md:prose-base'>
+                    <article className='my-8 prose prose-figure:my-10 prose-figcaption:text-center prose-img:mx-auto text-gray-800 max-w-none max-md:prose-sm'>
                         <MDXRemote {...mdxSource}/>
                     </article>
                 </div>

@@ -7,11 +7,11 @@ export default function PostContainerClassic({ thumbnail, title, description, da
             <div className='flex flex-col'>
                 <div className='bg-cover bg-center w-full h-52' style={{ backgroundImage: `url('${thumbnail}')` }}></div>
                 <div className='p-6 text-gray-800'>
-                    <p className='font-bold text-2xl'>{title}</p>
-                    <p className='mt-2 text-sm text-gray-400'>{description}</p>
+                    <p className='font-bold text-2xl max-sm:text-xl'>{title}</p>
+                    <p className='mt-2 text-sm text-gray-400 max-sm:text-xs'>{description}</p>
                 </div>
             </div>
-            <div className='p-6 h-[72px] flex items-center text-sm text-gray-800'>
+            <div className='p-6 h-[72px] flex items-center text-sm text-gray-800 max-sm:text-xs'>
                 <p>{date}</p>
                 <div className='w-[1px] h-5 bg-gray-800 mx-4'></div>
                 {disabled ? (

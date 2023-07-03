@@ -33,7 +33,7 @@ export default function Header(){
 
     return (
         <>
-            <div className={`bg-[#062135] px-0 py-2 flex justify-center items-center text-xs text-gray-50 lg:flex-row-reverse lg:justify-normal lg:text-sm lg:px-14 ${font.className}`}>
+            <div className={`bg-[#062135] px-14 py-2 flex flex-row-reverse items-center text-sm text-gray-50 max-lg:flex-row max-lg:justify-center max-lg:text-xs max-lg:px-0 ${font.className}`}>
                 <div className="flex items-center">
                     <Link href='mailto:baodaigov@gmail.com' className='flex items-center hover:underline underline-offset-4'><FiMail className="mr-2"/> baodaigov@gmail.com</Link>
                     <div className="w-[1px] h-4 mx-5 bg-gray-50"></div>
@@ -41,15 +41,15 @@ export default function Header(){
                 </div>
             </div>
             <div className={`w-full sticky top-0 z-10 ${font.className}`}>
-                <div className={`bg-[#0a314d] text-gray-50 transition-all lg:h-20 ${navMenuActive ? 'h-screen' : 'h-[72px]'}`}>
+                <div className={`bg-[#0a314d] text-gray-50 transition-all h-20 z-10 max-lg:h-[72px]`}>
                     <div className='py-6'>
-                        <div className='mx-auto max-w-7xl px-5 flex justify-between items-center lg:px-9'>
-                            {navMenuActive ? <FiX onClick={() => setNavMenuActive(false)}/> : <FiMenu className='block lg:hidden' onClick={() => setNavMenuActive(true)}/>}
+                        <div className='mx-auto max-w-7xl px-9 flex justify-between items-center max-lg:px-5'>
+                            {navMenuActive ? <FiX onClick={() => setNavMenuActive(false)}/> : <FiMenu className='hidden max-lg:block' onClick={() => setNavMenuActive(true)}/>}
                             <Link href='/'>
-                                <p className='text-base lg:text-2xl'>CHÍNH PHỦ QUỐC GIA BẢO ĐẠI</p>
+                                <p className='text-2xl max-lg:text-base'>CHÍNH PHỦ QUỐC GIA BẢO ĐẠI</p>
                             </Link>
                             <div role="navigation" className="flex items-center">
-                                <div className='hidden items-center lg:flex'>
+                                <div className='flex items-center max-lg:hidden'>
                                     {routes.map(i => (
                                         <Link href={i.href} className='mr-9' key={Math.random()}>
                                             <p className='text-sm text-gray-50 hover:text-gray-400'>{i.label}</p>
@@ -62,7 +62,7 @@ export default function Header(){
                             </div>
                         </div>
                     </div>
-                    <div className={`py-6 px-8 relative bottom-3 opacity-0 pointer-events-none transition-all duration-300 ${navMenuActive && 'bottom-0 opacity-100 pointer-events-auto'}`}>
+                    <div className={`py-6 px-8 bg-[#0a314d] h-screen opacity-0 pointer-events-none transition-all z-10 ${navMenuActive && 'opacity-100 pointer-events-auto'}`}>
                         {routes.map(i => (
                             <Link href={i.href} onClick={() => setNavMenuActive(false)} key={Math.random()}>
                                 <p className='text-2xl mb-9 text-gray-50 hover:text-gray-400'>{i.label}</p>
