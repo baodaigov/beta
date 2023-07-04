@@ -1,5 +1,6 @@
 'use client';
 
+import 'dotenv/config';
 import { EB_Garamond } from "next/font/google";
 import { FiMail, FiMenu, FiPhone, FiSearch, FiX } from 'react-icons/fi';
 import Link from "next/link";
@@ -37,7 +38,7 @@ export default function Header(){
                 <div className="flex items-center">
                     <Link href='mailto:baodaigov@gmail.com' className='flex items-center hover:underline underline-offset-4'><FiMail className="mr-2"/> baodaigov@gmail.com</Link>
                     <div className="w-[1px] h-4 mx-5 bg-gray-50"></div>
-                    <Link href='tel:+16823101496' className='flex items-center hover:underline'><FiPhone className="mr-2"/> +1 &#40;682&#41; 310-1496</Link>
+                    <Link href='tel:+16823101496' className='flex items-center hover:underline underline-offset-4'><FiPhone className="mr-2"/> +1 &#40;682&#41; 310-1496</Link>
                 </div>
             </div>
             <div className={`w-full sticky top-0 z-10 ${font.className}`}>
